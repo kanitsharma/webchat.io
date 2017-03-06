@@ -1,0 +1,72 @@
+body,
+html {
+    height: 100%;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("bg.jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#message{
+    background-color: rgba(0, 0, 255, 0.3);
+    border: 2px solid #5154D3;;
+    color: white;
+    width: 100%;
+    font-size: 25px;
+    margin: 0px;
+    box-shadow:0 2px 2px rgba(0, 0, 0, 0.3) !important;
+}
+.navbar {
+    background: #5154D3 !important;
+    border: none !important;
+    color: white !important;
+}
+.navbar-brand{
+    color: white !important;
+}
+
+.footer{
+     position:fixed !important;
+     bottom:0px !important;
+     left:0px !important;
+     right:0px !important;
+     margin-bottom:0px !important;
+}
+.page-header{
+    color: white !important;
+}
+textarea::-webkit-input-placeholder {
+    color: white !important;
+}
+.well{
+  background: #4F7AD4 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 25px !important;
+  box-shadow:0 10px 10px rgba(0, 0, 0, 0.3) !important;
+  font-size: 15px;
+  margin-right: 20px;
+}
+.chat{
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.chat::-webkit-scrollbar {
+    width: 1em;
+}
+
+.chat::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.chat::-webkit-scrollbar-thumb {
+    background-color: #4F7AD4;
+    outline: 1px solid slategrey;
+}
