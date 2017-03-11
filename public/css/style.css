@@ -9,13 +9,13 @@ html {
     /* Full height */
     height: 100%;
     /* Center and scale the image nicely */
-    background-position: center;
+    background-position: 0px 50px;
     background-repeat: no-repeat;
     background-size: cover;
 }
 #message{
-    background-color: rgba(0, 0, 255, 0.3);
-    border: 2px solid #5154D3;;
+    background-color: rgba(23, 12,27, 0.3);
+    border: 2px solid #3A1E46;
     color: white;
     width: 100%;
     font-size: 25px;
@@ -23,7 +23,7 @@ html {
     box-shadow:0 2px 2px rgba(0, 0, 0, 0.3) !important;
 }
 .navbar {
-    background: #5154D3 !important;
+    background: #211028 !important;
     border: none !important;
     color: white !important;
 }
@@ -45,10 +45,10 @@ textarea::-webkit-input-placeholder {
     color: white !important;
 }
 .well{
-  background: #4F7AD4 !important;
+  background:#3A1E46 !important;
   color: white !important;
   border: none !important;
-  border-radius: 25px !important;
+  border-radius: 20px !important;
   box-shadow:0 10px 10px rgba(0, 0, 0, 0.3) !important;
   font-size: 15px;
   margin-right: 20px;
@@ -67,6 +67,27 @@ textarea::-webkit-input-placeholder {
 }
 
 .chat::-webkit-scrollbar-thumb {
+    background-color : #3A1E46;;
+    outline: 1px solid slategrey;
+}
+.chat::-moz-scrollbar {
+    width: 1em;
+}
+
+.chat::-moz-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.chat::-moz-scrollbar-thumb {
     background-color: #4F7AD4;
     outline: 1px solid slategrey;
+}
+.navbar{
+    box-shadow:0 2px 2px rgba(0, 0, 0, 0.3) !important;
+}
+.nav li a{
+    color: white !important;
+}
+.nav li:hover{
+    background: #3A1E46 !important;
 }

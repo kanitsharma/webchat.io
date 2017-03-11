@@ -15,24 +15,28 @@
 
 <body  >
     <div class="bg">
-    <nav class="navbar navbar-default ">
+    <nav class="navbar navbar-default navbar-static-top">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">
                 Webchat
             </a>
         </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a>Login</a></li>
+            <li><a>About Developer</a></li>
+        </ul>
     </div>
 </nav>
     <div class="container">
         <div class="row">
 <div class="page-header">
-    <h1>You Are Online </h1>
+    <h3>You Are Online </h3>
 </div>
 <div class="chat" id="chat">
 
 </div>
-           
+
         </div>
     </div>
     <div class="col-md-12 footer">
@@ -42,25 +46,22 @@
         </div>
     </form>
 </div>
-   
+
     <script>
-    
+
     $(function(){
         var socket = io.connect();
         var $messageform = $('#messageform');
         var $message = $('#message');
         var $chat = $('#chat');
         $messageform.submit(function(e){
-            e.preventDefault();
-            socket.emit('send message',$message.val());
-            $message.val('');
         });
         socket.on('new message', function(data){
             $chat.append('<div class = "well">'+data.msg + '</div>');
         });
 
 
- $('#message').bind("enterKey",function(e){ 
+ $('#message').bind("enterKey",function(e){
 
      e.preventDefault(); socket.emit('send message',$message.val()); $message.val('');
 
