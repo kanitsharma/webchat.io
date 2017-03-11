@@ -6,73 +6,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/css/style.css" rel="stylesheet">
+    <script src="/app.js">
+
+    </script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="/socket.io/socket.io.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.min.js"></script>
+
 </head>
 
-<body  >
+<body ng-app = "myapp" >
     <div class="bg">
-    <nav class="navbar navbar-default navbar-static-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                Webchat
-            </a>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a>Login</a></li>
-            <li><a>About Developer</a></li>
-        </ul>
-    </div>
-</nav>
-    <div class="container">
-        <div class="row">
-<div class="page-header">
-    <h3>You Are Online </h3>
-</div>
-<div class="chat" id="chat">
 
-</div>
+      <nav class="navbar navbar-default navbar-static-top">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <a class="navbar-brand" href="#">
+                  Webchat
+              </a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+              <li><a ng-href="/">Login</a></li>
+              <li><a ng-href="#!/chat">Chat</a></li>
+              <li><a ng-href="#!/about">About Developer</a></li>
+          </ul>
+      </div>
+      </nav>
 
-        </div>
-    </div>
-    <div class="col-md-12 footer">
-    <form action="" id="messageform">
-        <div class="form-group">
-            <textarea class="form-control" id="message" placeholder="Enter Your Message Here"></textarea>
-        </div>
-    </form>
-</div>
+      <div ng-view>
 
-    <script>
+      </div>
 
-    $(function(){
-        var socket = io.connect();
-        var $messageform = $('#messageform');
-        var $message = $('#message');
-        var $chat = $('#chat');
-        $messageform.submit(function(e){
-        });
-        socket.on('new message', function(data){
-            $chat.append('<div class = "well">'+data.msg + '</div>');
-        });
+      <script>
+      var app = angular.module('myapp', ['ngRoute']);
 
 
- $('#message').bind("enterKey",function(e){
+      // configure our routes
+     app.config(function($routeProvider) {
+          $routeProvider
 
-     e.preventDefault(); socket.emit('send message',$message.val()); $message.val('');
+              // route for the home page
+              .when('/', {
+                  templateUrl : 'pages/login.html'
+              })
 
-  }); $('#message').keyup(function(e){ if(e.keyCode == 13) { $(this).trigger("enterKey");
-} });
+              // route for the about page
+              .when('/chat', {
+                  templateUrl : 'pages/chat.html'
+              });
 
+      });
+      </script>
 
-
-    });
-
-</script>
     </div>
 </body>
 
