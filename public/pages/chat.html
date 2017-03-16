@@ -6,7 +6,7 @@
 </div>
 <div class="chat" id="chat"  >
   <div class="well" ng-repeat = "x in messages track by $index">
-  <h3>{{x.name}}</h3>{{x.message}}
+  <strong>{{x.name}} : </strong><br>{{x.message}}
   </div>
 </div>
 

@@ -53,11 +53,23 @@ textarea::-webkit-input-placeholder {
   font-size: 15px;
   margin-right: 20px;
 }
+.well strong{
+  text-decoration: uppercase;
+}
 .chat{
     height: 400px;
     overflow-y: scroll;
 }
+@media only screen and (max-height: 500px) {
+    .chat {
 
+        height: 200px;
+    }
+    .well{
+      font-size: 10px;
+      margin-right: 20px;
+    }
+}
 .chat::-webkit-scrollbar {
     width: 1em;
 }
@@ -70,18 +82,7 @@ textarea::-webkit-input-placeholder {
     background-color : #3A1E46;;
     outline: 1px solid slategrey;
 }
-.chat::-moz-scrollbar {
-    width: 1em;
-}
 
-.chat::-moz-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-.chat::-moz-scrollbar-thumb {
-    background-color: #4F7AD4;
-    outline: 1px solid slategrey;
-}
 .navbar{
     box-shadow:0 2px 2px rgba(0, 0, 0, 0.3) !important;
 }
@@ -90,4 +91,41 @@ textarea::-webkit-input-placeholder {
 }
 .nav li:hover{
     background: #3A1E46 !important;
+}
+h3{
+  padding-top: none !important;
+  margin: none !important;
+}
+.cl{
+  display: block;
+  text-align: center;
+}
+#name {
+  background: none;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid white;
+  color: white;
+  margin: 10px;
+}
+
+#email {
+  background: none;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid white;
+  color: white;
+  margin: 10px;
+}
+#btt{
+  background: none;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid white;
+  color: white;
+  margin: 10px;
+  -webkit-transition: 0.5s;
+}
+#btt:hover{
+  background: #3A1E46;
 }
