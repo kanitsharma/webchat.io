@@ -21,6 +21,7 @@ html {
     font-size: 25px;
     margin: 0px;
     box-shadow:0 2px 2px rgba(0, 0, 0, 0.3) !important;
+    height : 200px !important;
 }
 .navbar {
     background: #211028 !important;
