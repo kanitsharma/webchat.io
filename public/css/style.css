@@ -1,14 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
 body,
 html {
     height: 100%;
+
 }
 .bg {
     /* The image used */
     background-image: url("bg.jpg");
+    font-family: 'Roboto', sans-serif;
     /* Full height */
     height: 100%;
     /* Center and scale the image nicely */
-    background-position: 0px 50px;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -22,17 +25,22 @@ html {
     width: 100% !important;
 }
 #message{
-    background-color: rgba(23, 12,27, 0.3);
-    border: 2px solid #3A1E46;
-    padding: 25px !important;
+    background: none;
+    border: 2px solid white;
+    padding: 30px !important;
     color: white;
     width: 100% !important ;
     font-size: 25px;
     margin: 0px;
-    box-shadow:0 2px 2px rgba(0, 0, 0, 0.3) !important;
+}
+#message::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+#message::-moz-placeholder { /* Firefox 19+ */
+  color: white;
 }
 .navbar {
-    background: #211028 !important;
+    background: #23898C !important;
     border: none !important;
     color: white !important;
 }
@@ -49,16 +57,17 @@ html {
 }
 .page-header{
     color: white !important;
+    border-bottom: 2px solid white !important;
 }
 textarea::-webkit-input-placeholder {
     color: white !important;
 }
 .well{
-  background:#3A1E46 !important;
+  background:#23898C !important;
   color: white !important;
   border: none !important;
   border-radius: 20px !important;
-  box-shadow:0 10px 10px rgba(0, 0, 0, 0.3) !important;
+  box-shadow:0 3px 10px rgba(0, 0, 0, 0.3) !important;
   font-size: 15px;
   margin-right: 20px;
 }
@@ -88,18 +97,18 @@ textarea::-webkit-input-placeholder {
 }
 
 .chat::-webkit-scrollbar-thumb {
-    background-color : #3A1E46;;
+    background-color : #23898C;
     outline: 1px solid slategrey;
 }
 
 .navbar{
-    box-shadow:0 2px 2px rgba(0, 0, 0, 0.3) !important;
+    box-shadow:0 1px 5px rgba(0, 0, 0, 0.3) !important;
 }
 .nav li a{
     color: white !important;
 }
 .nav li:hover{
-    background: #3A1E46 !important;
+    background: #29A79C !important;
 }
 h3{
   padding-top: none !important;
@@ -110,31 +119,50 @@ h3{
   text-align: center;
 }
 #name {
-  background: none;
+  background-color: rgba(0,0,0, 0.1);
   padding: 10px;
-  font-size: 20px;
-  border: 1px solid white;
+  font-size: 25px;
+  border: 2px solid white;
   color: white;
   margin: 10px;
+}
+#name:focus{
+  outline: none;
+}
+#email:focus{
+  outline: none;
+}
+#name::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+#name::-moz-placeholder { /* Firefox 19+ */
+  color: white;
 }
 
 #email {
-  background: none;
+  background-color: rgba(0,0,0, 0.1);
   padding: 10px;
-  font-size: 20px;
-  border: 1px solid white;
+  font-size: 25px;
+  border: 2px solid white;
   color: white;
   margin: 10px;
+}
+#email::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+#email::-moz-placeholder { /* Firefox 19+ */
+  color: white;
 }
 #btt{
-  background: none;
+  background-color: rgba(0,0,0, 0.1);
   padding: 10px;
   font-size: 20px;
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
   margin: 10px;
-  -webkit-transition: 0.5s;
+  -webkit-transition: 0.1s;
 }
 #btt:hover{
-  background: #3A1E46;
+  background: #29A79C;
+  border: none;
 }
